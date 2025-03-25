@@ -7,7 +7,7 @@ import LayoutFooter from './components/LayoutFooter.vue';
 <template>
   <div class="layout-container">
     <LayoutHeader/>
-    <RouterView/>
+    <RouterView :key="$route.fullPath"/>
     <LayoutFooter/>
 
   </div>

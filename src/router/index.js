@@ -5,8 +5,14 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Login from '@/views/Login/index.vue'
 import Layout from '@/views/Layout/index.vue'
 import Home from '@/views/Home/index.vue'
-import Category from '@/views/Category/index.vue'
+import Live from '@/views/Live/index.vue'
+import Activity from '@/views/Activity/index.vue'
 
+import LiveHot from '@/views/Live/components/LiveHot.vue'
+import LiveFollow from '@/views/Live/components/LiveFollow.vue'
+import LiveRecommend from '@/views/Live/components/LiveRecommend.vue'
+import LiveVIP from '@/views/Live/components/LiveVIP.vue'
+import LivenewComers from '@/views/Live/components/LiveNewcomers.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,8 +27,34 @@ const router = createRouter({
           component: Home
         },
         {
-          path: 'category',
-          component: Category
+          path: 'live',
+          component: Live,
+          children: [
+            {
+              path: '',
+              component: LiveHot,
+            },
+            {
+              path: 'livefollow',
+              component: LiveFollow
+            },
+            {
+              path: 'liverecommend',
+              component: LiveRecommend
+            },
+            {
+              path: 'livevip',
+              component: LiveVIP
+            },
+            {
+              path: 'livenewcomers',
+              component: LivenewComers
+            },
+          ]
+        },
+        {
+          path: 'activity',
+          component: Activity
         }
       ]
     },
