@@ -96,6 +96,12 @@ const groupedImages = computed(() => {
     }
 }
 
+@media (max-width: 991px) {
+  .container {
+    height: 20rem;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     height: 16rem;

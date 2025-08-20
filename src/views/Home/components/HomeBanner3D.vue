@@ -97,7 +97,7 @@ export default {
     onUnmounted(() => {
       if (autoTimer) clearInterval(autoTimer); // 清除計時器
       const box = root.value;
-      box.removeEventListener('mouseenter', () => clearInterval(autoTimer));
+
       box.removeEventListener('mouseleave', autoPlay);
     });
 
@@ -260,7 +260,7 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 100;
+      z-index: 10;
       .left{
         position: absolute;
         top: 0;
@@ -278,6 +278,12 @@ export default {
         cursor: pointer;
       }
     }
+}
+
+@media (max-width: 991px) {
+  .container {
+    height: 30rem;
+  }
 }
 
 @media (max-width: 768px) {

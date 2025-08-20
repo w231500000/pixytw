@@ -15,11 +15,13 @@ import '@/styles/common.scss'
 // 引入所需的圖標
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faHome, faMagnifyingGlass, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faMagnifyingGlass, faBars, faTimes, faXmark, faHeart as solidHeart} from '@fortawesome/free-solid-svg-icons'
+import { faHeart as regularHeart, faComment as regularComment,
+  faShareSquare as regularShare } from '@fortawesome/free-regular-svg-icons';
 import { faFacebook, faLine, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 // 把圖標添加到庫中
-library.add(faHome, faMagnifyingGlass, faBars, faTimes)
+library.add(faHome, faMagnifyingGlass, faBars, faTimes, faXmark, solidHeart, regularHeart, regularComment, regularShare )
 library.add(faFacebook, faLine, faInstagram)
 
 const app = createApp(App)

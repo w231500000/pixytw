@@ -19,28 +19,28 @@ const toggleMenu = () => {
 
       <!-- 導航選單 -->
       <ul class="app-header-nav" :class="{ 'open': isMenuOpen }">
-        <li>
+        <li @click="$router.push('/')">
           <RouterLink to="/" exact-active-class="active-link">首頁</RouterLink>
         </li>
-        <li>
+        <li @click="$router.push('/live')">
           <RouterLink to="/live" active-class="active-link">直播</RouterLink>
         </li>
-        <li>
+        <li @click="$router.push('/activity')">
           <RouterLink to="/activity" active-class="active-link">活動</RouterLink>
         </li>
-        <li>
+        <li @click="$router.push('/dynamic')">
           <RouterLink to="/dynamic" active-class="active-link">動態</RouterLink>
         </li>
-        <li>
+        <li @click="$router.push('/video')">
           <RouterLink to="/video" active-class="active-link">影音</RouterLink>
         </li>
-        <li>
+        <!-- <li>
           <RouterLink to="/reward" active-class="active-link">獎勵</RouterLink>
         </li>
         <li>
           <RouterLink to="/topup" active-class="active-link">儲值</RouterLink>
-        </li>
-        <li>
+        </li>-->
+        <li @click="$router.push('/recruit')">
           <RouterLink to="/recruit" active-class="active-link">招募</RouterLink>
         </li>
       </ul>
@@ -63,6 +63,7 @@ const toggleMenu = () => {
 <style scoped lang="scss">
 .app-header {
   width: 100%;
+  height: 8rem;
   background: $bgColor;
   border-bottom: 0.01rem solid $xtxColor;
   padding: 1rem 0;
@@ -74,11 +75,11 @@ const toggleMenu = () => {
   }
 
   .logo {
-    width: 5.5rem;
+    width: 4rem;
 
     a {
       display: block;
-      height: 8rem;
+      height: 6rem;
       width: 100%;
       text-indent: -62.5rem;
       background: url('@/assets/images/logo.png') no-repeat center 18px / contain;
@@ -97,7 +98,7 @@ const toggleMenu = () => {
 
   .app-header-nav {
     display: flex;
-    z-index: 998;
+    z-index: 90;
 
     li {
       margin-right: 3rem;
@@ -187,11 +188,6 @@ const toggleMenu = () => {
 
       .container {
         width: 100%;
-
-        .logo {
-          width: 1rem;
-          height: 1rem;
-        }
 
         .menu-toggle {
           display: block;

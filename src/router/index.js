@@ -7,6 +7,10 @@ import Layout from '@/views/Layout/index.vue'
 import Home from '@/views/Home/index.vue'
 import Live from '@/views/Live/index.vue'
 import Activity from '@/views/Activity/index.vue'
+import Dynamic from '@/views/Dynamic/index.vue'
+import DynamicDetail from '@/views/Dynamic/DynamicDetail.vue'
+import Recruit from '@/views/Recruit/index.vue'
+import Video from '@/views/Video/index.vue'
 
 import LiveHot from '@/views/Live/components/LiveHot.vue'
 import LiveFollow from '@/views/Live/components/LiveFollow.vue'
@@ -55,6 +59,24 @@ const router = createRouter({
         {
           path: 'activity',
           component: Activity
+        },
+        {
+          path: 'dynamic',
+          component: Dynamic,
+          children:[
+            {
+              path: 'dynamicdetail',
+              component: DynamicDetail
+            }
+          ]
+        },
+        {
+          path: 'video',
+          component: Video,
+        },
+        {
+          path: 'recruit',
+          component: Recruit,
         }
       ]
     },

@@ -1,12 +1,14 @@
 <script setup>
 import LayoutHeader from './components/LayoutHeader.vue';
 import LayoutFooter from './components/LayoutFooter.vue';
+import LayoutFixed from './components/LayoutFixed.vue';
 
 </script>
 
 <template>
   <div class="layout-container">
     <LayoutHeader/>
+    <LayoutFixed/>
     <RouterView :key="$route.fullPath"/>
     <LayoutFooter/>
 
